@@ -16,3 +16,7 @@ if !WinExist("ahk_exe Launcher.exe")
 ; Launch Streamlabs OBS
 if !WinExist("ahk_exe Streamlabs OBS.exe")
     Run, "C:\Program Files\Streamlabs OBS\Streamlabs OBS.exe"
+
+;Launch GPMDP
+if !WinExist("ahk_exe  Google Play Music Desktop Player.exe")
+    Run, C:\Users\denni\AppData\Local\GPMDP_3\Update.exe --processStart "Google Play Music Desktop Player.exe"
