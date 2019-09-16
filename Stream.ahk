@@ -28,3 +28,6 @@ if !WinExist("ahk_exe Streamlabs Chatbot.exe")
 ;Launch Discord with .lnk since I can't count on the version dir name.
 if !WinExist("ahk_exe Discord.exe")
     Run, "C:\Users\denni\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk"
+
+if !WinExist("ahk_exe SndVol.exe")
+    Run, C:\Windows\System32\SndVol.exe
