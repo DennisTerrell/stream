@@ -21,10 +21,10 @@ if !WinExist("ahk_exe Streamlabs OBS.exe")
 if !WinExist("ahk_exe  Google Play Music Desktop Player.exe")
     Run, C:\Users\denni\AppData\Local\GPMDP_3\Update.exe --processStart "Google Play Music Desktop Player.exe"
 
-;Launch Streamlabs Chatbot
-;if !WinExist("ahk_exe Streamlabs Chatbot.exe")
-;    Run, "C:\Users\denni\AppData\Roaming\Streamlabs\Streamlabs Chatbot\Streamlabs Chatbot.exe"
+;Launch Streamlabs Chatbot with shortcut since I don't know how to reference the Services dir upon launch.
+if !WinExist("ahk_exe Streamlabs Chatbot.exe")
+    Run, "C:\Users\denni\AppData\Roaming\Streamlabs\Streamlabs Chatbot\Streamlabs Chatbot.lnk"
 
-;Discord
+;Launch Discord with .lnk since I can't count on the version dir name.
 if !WinExist("ahk_exe Discord.exe")
     Run, "C:\Users\denni\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Discord Inc\Discord.lnk"
