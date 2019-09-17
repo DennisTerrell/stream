@@ -34,3 +34,6 @@ if !WinExist("ahk_exe SndVol.exe")
 
 if !WinExist("ahk_exe VoiceAttack.exe")
     Run, "C:\Program Files (x86)\Steam\steamapps\common\VoiceAttack\VoiceAttack.exe"
+
+if !WinExist("ahk_exe chrome.exe")
+    Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "twitch.tv/directory/game/Star Citizen"
