@@ -31,3 +31,6 @@ if !WinExist("ahk_exe Discord.exe")
 
 if !WinExist("ahk_exe SndVol.exe")
     Run, C:\Windows\System32\SndVol.exe
+
+if !WinExist("ahk_exe VoiceAttack.exe")
+    Run, "C:\Program Files (x86)\Steam\steamapps\common\VoiceAttack\VoiceAttack.exe"
