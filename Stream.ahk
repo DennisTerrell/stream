@@ -13,9 +13,9 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 if !WinExist("ahk_exe Launcher.exe")
     Run, "C:\Program Files (x86)\Steam\steamapps\common\FaceRig\Bin\FaceRig.exe"
     WinWait, ahk_exe Launcher.exe
-    WinActivate, Discord ahk_class Chrome_WidgetWin_1 
-    WinRestore, Discord ahk_class Chrome_WidgetWin_1
-    WinMove, Discord ahk_class Chrome_WidgetWin_1, ,-2558,0,940,1439
+    WinActivate, Facerig Launcher ahk_class CoherentSampleWindow
+    WinRestore, Facerig Launcher ahk_class CoherentSampleWindow
+    WinMove, Facerig Launcher ahk_class CoherentSampleWindow, ,-804,0,800,561
     
 ; Launch Streamlabs OBS
 if !WinExist("ahk_exe Streamlabs OBS.exe")
