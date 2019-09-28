@@ -72,9 +72,11 @@ if !WinExist("ahk_exe Streamlabs OBS.exe")
 ;Launch Streamlabs Chatbot with shortcut since I don't know how to reference the Services dir upon launch.
 if !WinExist("ahk_exe Streamlabs Chatbot.exe")
     Run, "C:\Users\denni\AppData\Roaming\Streamlabs\Streamlabs Chatbot\Streamlabs Chatbot.lnk"
-    WinWait, ahk_exe Streamlabs Chatbot 
-    WinActivate, ahk_exe Streamlabs Chatbot
-    WinRestore, ahk_exe Streamlabs Chatbot 
+    WinWait, Streamlabs Chatbot 
+    WinActivate, Streamlabs Chatbot
+    WinRestore, Streamlabs Chatbot 
     WinMove, Streamlabs Chatbot, ,2560,0,1279,1440
 
-
+;Now it's time to play!
+if !WinExist("ahk_exe RSI Launcher.exe")
+    Run, "C:\Users\denni\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Robert Space Industries\RSI Launcher.lnk"
