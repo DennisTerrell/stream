@@ -17,14 +17,6 @@ if !WinExist("ahk_exe Launcher.exe")
     WinRestore, Facerig Launcher
     WinMove, Facerig Launcher, ,-804,0,800,561
     
-; Launch Streamlabs OBS
-if !WinExist("ahk_exe Streamlabs OBS.exe")
-    Run, "C:\Program Files\Streamlabs OBS\Streamlabs OBS.exe"
-    WinWait, Streamlabs OBS
-    WinActivate, Streamlabs OBS 
-    WinRestore, Streamlabs OBS
-    WinMove, Streamlabs OBS, ,-1616,0,1616,1440
-
 ;Launch GPMDP
 if !WinExist("ahk_exe  Google Play Music Desktop Player.exe")
     Run, C:\Users\denni\AppData\Local\GPMDP_3\Update.exe --processStart "Google Play Music Desktop Player.exe"
@@ -41,6 +33,7 @@ if !WinExist("ahk_exe Discord.exe")
     WinRestore, Discord
     WinMove, Discord, ,-2558,0,940,1440
 
+; yea yea I know Windows Volume Mixer sucks
 if !WinExist("ahk_exe SndVol.exe")
     Run, C:\Windows\System32\SndVol.exe
     WinWait, Volume Mixer 
@@ -48,6 +41,7 @@ if !WinExist("ahk_exe SndVol.exe")
     WinRestore, Volume Mixer 
     WinMove, Volume Mixer, ,3832,1096,1290,350
 
+;Launch VoiceAttack --needs to select appropriate profile
 if !WinExist("ahk_exe VoiceAttack.exe")
     Run, "C:\Program Files (x86)\Steam\steamapps\common\VoiceAttack\VoiceAttack.exe"
     WinWait, VoiceAttack
@@ -55,6 +49,7 @@ if !WinExist("ahk_exe VoiceAttack.exe")
     WinRestore, VoiceAttack
     WinMinimize
 
+;Launch Chrome with a specific tab -- needs work
 if !WinExist("ahk_exe chrome.exe")
     Run, "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "twitch.tv/directory/game/Star Citizen"
     ;need to add multiple tabs here
@@ -64,7 +59,15 @@ if !WinExist("ahk_exe chrome.exe")
     WinWait, Star Citizen 
     WinActivate, Star Citizen 
     WinRestore, Star Citizen
-    WinMove, Star Citizen, ,3832,0,940,1439
+    WinMove, Star Citizen, ,3832,0,1296,1101
+
+; Launch Streamlabs OBS
+if !WinExist("ahk_exe Streamlabs OBS.exe")
+    Run, "C:\Program Files\Streamlabs OBS\Streamlabs OBS.exe"
+    WinWait, Streamlabs OBS
+    WinActivate, Streamlabs OBS 
+    WinRestore, Streamlabs OBS
+    WinMove, Streamlabs OBS, ,-1616,0,1616,1440
 
 ;Launch Streamlabs Chatbot with shortcut since I don't know how to reference the Services dir upon launch.
 if !WinExist("ahk_exe Streamlabs Chatbot.exe")
@@ -73,4 +76,5 @@ if !WinExist("ahk_exe Streamlabs Chatbot.exe")
     WinActivate, ahk_exe Streamlabs Chatbot
     WinRestore, ahk_exe Streamlabs Chatbot 
     WinMove, Streamlabs Chatbot, ,2560,0,1279,1440
+
 
