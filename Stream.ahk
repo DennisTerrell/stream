@@ -56,10 +56,10 @@ if !WinExist("ahk_exe chrome.exe")
     ;don't forget https://www.autohotkey.com/boards/viewtopic.php?t=42890
     ;or the dumb version https://www.autohotkey.com/boards/viewtopic.php?t=37347
     ;still need https://www.tipeeestream.com/login
-    WinWait, Star Citizen 
-    WinActivate, Star Citizen 
-    WinRestore, Star Citizen
-    WinMove, Star Citizen, ,3832,0,1296,1101
+    WinWait, Google Chrome 
+    WinActivate, Google Chrome 
+    WinRestore, Google Chrome 
+    WinMove, Google Chrome, ,3832,0,1296,1101
 
 ; Launch Streamlabs OBS
 if !WinExist("ahk_exe Streamlabs OBS.exe")
@@ -76,6 +76,14 @@ if !WinExist("ahk_exe Streamlabs Chatbot.exe")
     WinActivate, Streamlabs Chatbot
     WinRestore, Streamlabs Chatbot 
     WinMove, Streamlabs Chatbot, ,2560,0,1279,1440
+
+;Launch and Minimize the GoXLR App if not already opened
+if !WinExist("ahk_exe GoXLR App.exe")
+    Run, "C:\Program Files (x86)\TC-Helicon\GOXLR\GoXLR App.exe"
+    WinWait, GOXLR App
+    WinActivate, GOXLR App
+    WinRestore, GOXLR App
+    WinMinimize, GOXLR App 
 
 ;Now it's time to play!
 if !WinExist("ahk_exe RSI Launcher.exe")
